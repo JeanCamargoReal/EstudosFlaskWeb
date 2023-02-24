@@ -6,9 +6,10 @@ from ..models import curso_model
 
 
 class CursoSchema(ma.SQLAlchemyAutoSchema):
-    model = curso_model.Curso
-    loas_instance = True
-    fields = ("id", "nome", "descricao", "data-publicacao")
+    class Meta:
+        model = curso_model.Curso
+        load_instance = True
+        fields = ("id", "nome", "descricao", "data_publicacao")
 
     nome = fields.String(required=True)
     descricao = fields.String(required=True)
