@@ -11,4 +11,5 @@ migrate = Migrate(app, db)
 
 api = Api(app)
 
+from .models import curso_model
 from .views import curso_views
